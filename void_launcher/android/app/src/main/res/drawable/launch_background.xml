@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- White canvas with a faint centered black dot — the sphere's silhouette,
+     pre-warming the eye before Flutter renders the real thing. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+    <item android:gravity="bottom|center_horizontal">
+        <shape android:shape="oval">
+            <size android:width="220dp" android:height="220dp" />
+            <solid android:color="#FF101010" />
+        </shape>
+    </item>
+</layer-list>

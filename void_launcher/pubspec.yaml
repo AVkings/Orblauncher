@@ -1,0 +1,39 @@
+name: void_launcher
+description: >-
+  A minimalist black & white Android launcher built around a giant glowing
+  sphere with lagged, physics-based animations. Pure Flutter + a thin Kotlin
+  platform channel for app enumeration / launching / role (HOME) requests.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+  flutter: '>=3.16.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── State management ────────────────────────────────────────────────
+  # Riverpod (v2) keeps the physics-driven UI honest: every gesture feeds a
+  # notifier, and the sphere simply *renders* whatever state it observes.
+  flutter_riverpod: ^2.4.9
+
+  # ── Fonts: minimalist sans-serif (Inter, falls back to system) ──────
+  google_fonts: ^6.1.0
+
+  # ── Haptics for micro-interactions ──────────────────────────────────
+  vibration: ^1.8.4
+
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+  # Inter is bundled locally so the app works offline on a fresh device
+  # (google_fonts still used as a graceful fallback / weight loader).
+  fonts: []
